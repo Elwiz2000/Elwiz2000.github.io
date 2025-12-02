@@ -5,6 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences - Ouiza Manseur</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #0f111a;
+            color: #fff;
+        }
+        header nav {
+            background-color: #1b1f2a;
+            padding: 15px 0;
+        }
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            margin: 0 20px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav ul li a.active,
+        header nav ul li a:hover {
+            color: #1abc9c;
+        }
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1abc9c;
+            margin-bottom: 50px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        .skills-column {
+            flex: 1 1 45%;
+        }
+        .skills-column h2 {
+            color: #1abc9c;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+        .skill {
+            margin: 15px 0;
+        }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .skill-bar {
+            background-color: #222533;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .skill-level {
+            height: 100%;
+            background-color: #1abc9c;
+            text-align: right;
+            padding-right: 5px;
+            line-height: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1b1f2a;
+            margin-top: 50px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,29 +104,65 @@
     </header>
 
     <main>
-        <section class="skills">
-            <h1>Mes Compétences</h1>
+        <h1>Mes Compétences</h1>
 
-            <h2>Compétences Techniques</h2>
-            <ul>
-                <li><strong>Programmation et automatisation :</strong> Python pour scripts de supervision PKI (Bouygues Telecom), Java et Bash pour des projets personnels et universitaires, API REST.</li>
-                <li><strong>Cloud & Virtualisation :</strong> Azure et AWS pour déploiement et monitoring, VMware et Proxmox pour environnement virtualisé.</li>
-                <li><strong>Administration Systèmes :</strong> Linux (Ubuntu, Debian), Windows Server, Active Directory (gestion comptes, GPO), Office 365, Intune, Red Hat.</li>
-                <li><strong>Réseaux :</strong> TCP/IP, DHCP, DNS, VLAN, VPN, LAN/WAN/WLAN, OSPF, BGP, QoS, configuration de switchs et routeurs Cisco, FortiGate, pfSense.</li>
-                <li><strong>Cybersécurité :</strong> Pentesting, Kali Linux, Burp Suite, Metasploit, Wireshark, OWASP, firewall, IAM, IPS/IDS, cryptographie, PKI, ISO27001/27002, RGPD.</li>
-                <li><strong>DevOps & CI/CD :</strong> GitHub Actions, Jenkins, GitLab CI/CD, Docker, Kubernetes, Ansible, automatisation des déploiements et supervision (Zabbix, Metroman, Grafana).</li>
-            </ul>
+        <div class="skills-container">
+            <!-- Colonnes Techniques -->
+            <div class="skills-column">
+                <h2>Techniques</h2>
 
-            <h2>Compétences Personnelles</h2>
-            <ul>
-                <li><strong>Autonomie :</strong> Mise en place d’un pipeline CI/CD complet et supervision PKI seule, réduisant 60% du travail manuel.</li>
-                <li><strong>Esprit analytique :</strong> Diagnostic et résolution d’incidents réseaux et systèmes chez Weodeo et Bouygues Telecom.</li>
-                <li><strong>Communication :</strong> Rédaction de documentation technique claire et travail en équipe multi-services.</li>
-                <li><strong>Gestion des priorités :</strong> Suivi simultané des incidents, projets DevOps et déploiements cloud avec respect des délais.</li>
-                <li><strong>Apprentissage continu :</strong> Intégration rapide de nouvelles technologies comme LangChain, Terraform et nouvelles pratiques cybersécurité.</li>
-            </ul>
+                <div class="skill">
+                    <div class="skill-name">Python & Automatisation</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Linux & Windows Server</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Cloud & Virtualisation</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Réseaux (TCP/IP, VLAN, VPN, Cisco)</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Cybersécurité (Pentesting, Firewalls, PKI)</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Docker & CI/CD</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 75%;">75%</div></div>
+                </div>
+            </div>
 
-        </section>
+            <!-- Colonnes Personnelles -->
+            <div class="skills-column">
+                <h2>Personnelles</h2>
+
+                <div class="skill">
+                    <div class="skill-name">Autonomie</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Esprit analytique</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Communication</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Gestion des priorités</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Apprentissage continu</div>
+                    <div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
