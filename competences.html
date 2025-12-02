@@ -1,172 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Ouiza Manseur</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #0f111a;
-            color: #fff;
-        }
-        header nav {
-            background-color: #1b1f2a;
-            padding: 15px 0;
-        }
-        header nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        header nav ul li {
-            margin: 0 20px;
-        }
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        header nav ul li a.active,
-        header nav ul li a:hover {
-            color: #1abc9c;
-        }
-        main {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #1abc9c;
-            margin-bottom: 50px;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-between;
-        }
-        .skills-column {
-            flex: 1 1 45%;
-        }
-        .skills-column h2 {
-            color: #1abc9c;
-            border-bottom: 2px solid #1abc9c;
-            padding-bottom: 5px;
-        }
-        .skill {
-            margin: 15px 0;
-        }
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-        }
-        .skill-bar {
-            background-color: #222533;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 20px;
-            margin-top: 5px;
-        }
-        .skill-level {
-            height: 100%;
-            background-color: #1abc9c;
-            text-align: right;
-            padding-right: 5px;
-            line-height: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1b1f2a;
-            margin-top: 50px;
-            color: #aaa;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compétences - Ouiza Manseur</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f111a;
+    color: #fff;
+}
+header nav {
+    background-color: #1b1f2a;
+    padding: 15px 0;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li {
+    margin: 0 20px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: #1abc9c;
+}
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+h1 {
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 50px;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+.skills-column {
+    flex: 1 1 45%;
+}
+.skills-column h2 {
+    color: #1abc9c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+}
+.skill {
+    margin: 20px 0;
+}
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.skill-bar {
+    background-color: #222533;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+}
+.skill-level {
+    height: 100%;
+    background-color: #1abc9c;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 25px;
+    border-radius: 10px;
+    width: 0;
+    animation: fillBar 1.5s forwards;
+}
+@keyframes fillBar {
+    from {width: 0;}
+    to {width: var(--skill-width);}
+}
+.skill i {
+    margin-right: 10px;
+    color: #1abc9c;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1f2a;
+    margin-top: 50px;
+    color: #aaa;
+}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="competences.html" class="active">Compétences</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="competences.html" class="active">Compétences</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <h1>Mes Compétences</h1>
+<main>
+<h1>Mes Compétences</h1>
+<div class="skills-container">
 
-        <div class="skills-container">
-            <!-- Colonnes Techniques -->
-            <div class="skills-column">
-                <h2>Techniques</h2>
+<!-- Colonnes Techniques -->
+<div class="skills-column">
+<h2>Techniques</h2>
 
-                <div class="skill">
-                    <div class="skill-name">Python & Automatisation</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Linux & Windows Server</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Cloud & Virtualisation</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Réseaux (TCP/IP, VLAN, VPN, Cisco)</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Cybersécurité (Pentesting, Firewalls, PKI)</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Docker & CI/CD</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 75%;">75%</div></div>
-                </div>
-            </div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-code"></i> Python & Automatisation</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:90%;">90%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fab fa-linux"></i> Linux & Windows Server</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:85%;">85%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-cloud"></i> Cloud & Virtualisation</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:80%;">80%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-network-wired"></i> Réseaux</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:85%;">85%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-shield-alt"></i> Cybersécurité</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:80%;">80%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-docker"></i> Docker & CI/CD</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:75%;">75%</div></div>
+</div>
+</div>
 
-            <!-- Colonnes Personnelles -->
-            <div class="skills-column">
-                <h2>Personnelles</h2>
+<!-- Colonnes Personnelles -->
+<div class="skills-column">
+<h2>Personnelles</h2>
 
-                <div class="skill">
-                    <div class="skill-name">Autonomie</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Esprit analytique</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Communication</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Gestion des priorités</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Apprentissage continu</div>
-                    <div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div>
-                </div>
-            </div>
-        </div>
-    </main>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-user-check"></i> Autonomie</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:90%;">90%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-brain"></i> Esprit analytique</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:85%;">85%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-comments"></i> Communication</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:80%;">80%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-tasks"></i> Gestion des priorités</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:85%;">85%</div></div>
+</div>
+<div class="skill">
+    <div class="skill-name"><i class="fas fa-book"></i> Apprentissage continu</div>
+    <div class="skill-bar"><div class="skill-level" style="--skill-width:95%;">95%</div></div>
+</div>
+</div>
 
-    <footer>
-        <p>© 2025 Ouiza Manseur - Portfolio</p>
-    </footer>
+</div>
+</main>
+
+<footer>
+<p>© 2025 Ouiza Manseur - Portfolio</p>
+</footer>
 </body>
 </html>
+
